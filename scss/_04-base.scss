@@ -1,0 +1,31 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: $ff-primary;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: $clr-dark;
+  transition: .5s ease;
+}
+body .show{
+  transform: translateX(-350px);
+}
+a {
+  color: $clr-dark;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+h1, h2, h3, h4, h5 h6{
+  font-weight: bold;
+  span{
+    color: $clr-primary;
+
+  }
+}
+

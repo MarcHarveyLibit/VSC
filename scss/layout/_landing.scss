@@ -1,0 +1,84 @@
+.banner{
+    width: 100%;
+    background-color: #25252B;
+    text-align: center;
+    padding: 1rem;
+    &__wrapper{
+        display: grid;
+        grid-gap: 15rem;
+        width: 100%;
+        place-items: center;
+        place-content: center;
+        &__text2{
+            .textbanner{
+                max-width: 60rem;
+                text-align: center;
+                margin: 0;
+                font-size: 1.5rem;
+                color:  #0098ff;
+                span{
+                    color: $clr-gray;
+                }
+            }
+        }
+        h3{
+            font-size: 5rem;
+            color: $clr-light;
+            font-weight: 400;
+            padding-top: 5rem;
+            text-align: center;
+        }
+        p{
+            max-width: 60rem;
+            text-align: center;
+            margin: 0;
+            font-size: 1.5rem;
+            color: $clr-gray;
+        }
+    }
+    &__text1{
+        text-align: center;
+        h2{
+            color: $clr-gray;
+            background-color: #25252B;
+            padding: 1rem;
+        }
+        span{
+            color: #0098ff;
+        }
+    }
+    &__dl{
+        display: flex;
+        flex-direction: column;
+        color: #0098ff;
+        @include mediaQuery($desktop){
+            display: grid;
+            @include grid(2, 0rem);
+            height: 100%;
+            max-height: 7rem;
+            position: relative;
+    }
+}
+.btn__down{
+    display: flex;
+    flex-direction: column;
+    background-color: $clr-primary;
+    @include mediaQuery($desktop){
+        display: grid;
+        @include grid(2, 0rem);
+        height: 100%;
+        max-height: 7rem;
+        position: relative;
+}
+}
+
+.img{
+    position: relative;
+    .pic{
+        position: absolute;
+        top: 0px;
+        opacity: .5;
+        align-items: center;
+    }
+}
+}

@@ -1,0 +1,45 @@
+// .btn{
+//     background-color: $clr-primary;
+//     padding: .8rem 1.8rem;
+//     border-radius: 3rem;
+//     border: 1px solid;
+//     display: inline-block;
+//     transition: .5s ease-in-out;
+//     &-primary{
+//         background-color: $clr-primary;
+//         color: $clr-light;
+//         border-color: $clr-primary;
+//         &:hover{
+//             background-color: darken($clr-primary, 10);
+//         }
+//     }
+
+//     &-outline{
+//         background-color: transparent;
+//         color: $clr-primary;
+//         border-color: $clr-primary;
+//         &:hover{
+//             background-color: $clr-primary;
+//             color: $clr-light;
+//         }
+//     }
+
+//     &-dark{
+//         background-color: $clr-dark;
+//         color: $clr-light;
+//         border-color: $clr-dark;
+//         &:hover{
+//             background-color: darken($clr-dark, 10);
+//         }
+//     }
+// }
+
+
+.btn{
+    background-color: $clr-primary;
+    color: $clr-light;
+    &:hover{
+    background-color: $clr-primary-dark;
+    }
+    }
+    

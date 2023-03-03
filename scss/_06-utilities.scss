@@ -1,0 +1,67 @@
+$displays: flex, grid, block;
+
+@each $display in $displays {
+  .d--#{$display} {
+    display: $display;
+  }
+}
+
+$colors: (
+  "primary": $clr-primary,
+  "secondary": $clr-secondary,
+  "gray": $clr-light,
+  "light": $clr-dark,
+  "dark": $clr-gray,
+);
+
+@each $key, $val in $colors {
+  .text--#{$key} {
+    color: #{$val};
+  }
+  .bg--#{$key} {
+    background-color: #{$val};
+  }
+}
+
+@for $i from 1 through 6 {
+  .mb--#{$i} {
+    margin-bottom: $i + rem;
+  }
+
+  .gap--#{$i}{
+    gap: #{$i}+rem;
+  }
+
+  .py--#{$i}{
+    padding: #{$i}+rem 0;
+  }
+}
+
+
+
+$alignments: left, right, center;
+
+@each $alignment in $alignments {
+  .text--#{$alignment} {
+    text-align: $alignment;
+  }
+
+  }
+
+
+$justify: (
+  "start": flex-start,
+  "end": flex-end,
+  "between": space-between,
+  "around": space-around,
+  "center": center,
+);
+
+@each $key, $val in $justify {
+  .justify--#{$key} {
+    justify-content: $val;
+  }
+  .align--#{$key}{
+    align-items: $val;
+  }
+}
