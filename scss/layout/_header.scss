@@ -10,7 +10,7 @@
         height: 6rem;
     .branding{
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
         padding: 1rem 0;
         width: 30rem;
@@ -37,6 +37,7 @@
         height: 100%;
         transition: .5s ease;
         max-height: 36rem;
+        z-index: 2;
         @include mediaQuery($desktop){
             background-color: unset;
             top: 0;
@@ -70,6 +71,7 @@
         display: flex;
         flex-direction: column;
         color: $clr-light;
+        position: relative;
         @include mediaQuery($desktop){
             display: grid;
             @include grid(2, 0rem);

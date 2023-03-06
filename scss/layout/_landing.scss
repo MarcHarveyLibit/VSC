@@ -1,84 +1,262 @@
 .banner{
-    width: 100%;
-    background-color: #25252B;
-    text-align: center;
-    padding: 1rem;
+    background-color:$clr-dark;
+    z-index: -1;
     &__wrapper{
-        display: grid;
-        grid-gap: 15rem;
-        width: 100%;
-        place-items: center;
-        place-content: center;
-        &__text2{
-            .textbanner{
-                max-width: 60rem;
-                text-align: center;
-                margin: 0;
-                font-size: 1.5rem;
-                color:  #0098ff;
+       p{
+        color: $clr-light;
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        padding: .5rem 4rem;
+            a{
+                color: #188aff;
+            }
+       }
+    }
+
+    &__text__wrapper1{
+        @include grid(1.5fr 3fr, 1rem);
+    }
+
+}
+
+.banner__text1{
+    background-color:$clr-dark;
+    .container{
+        @include mediaQuery($desktop){
+            display: flex;
+            padding: 0;
+        }
+    }
+    &__wrapper{
+
+        h4{
+            padding-top: 1rem;
+            font-size: 4rem;
+            text-align: center;
+            color:$clr-light;
+            font-weight: 100;
+        }
+        h2
+        {
+            color: $clr-light;
+            text-align: center;
+            font-weight: 500;
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+        p{
+            color: $clr-light;
+            text-align: center;
+            font-weight: 50;
+            font-size: 1.5rem;
+            opacity: 70%;
+        }
+    }
+    .bot{
+        justify-content: center;
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: 1.5rem;
+            a{
+                padding: 1.59rem ;
+            }
+        
+        a:first-child{
+            align-self: center;
+            padding: .9rem 4.5rem;
                 span{
-                    color: $clr-gray;
+                    padding-top: .5rem;
+                    line-height: .5;
+                    display: block;
+                    text-align: center;
+                    &:last-child{
+                        font-size: 1.1rem;
+                        margin: .6rem 0;
+                
+                    }
+                }
+        }  
+    }
+
+    .banner__text2{
+        .text2{
+            color: $clr-light;
+            font-size: 1.5rem;
+            text-align: center;
+            background-color: #25252b;
+            border-radius: 1rem;
+            width: 30rem;
+            margin: 0 auto;
+            padding: .5rem .5rem;
+            a{
+                color:#3774ee;
+                font-size: 1.2rem;
+                
+                    &:hover{
+                        text-decoration: underline;
+                    }
+            }
+            
+        }
+        p{
+            color: $clr-light;
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 80%;
+                span{
+                    display: block;
+                        a{
+                            color: #2267f2;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                }
+        }
+        }
+    }
+
+
+
+.icons{
+    background-color: $clr-light;
+    .container{
+        padding: 0 1.5rem;
+    }
+    &__wrapper{
+        @include grid(2,1rem);
+        .item__icon{
+            text-align: center;
+            a{
+                display: block;
+                height: 100%;
+                width: 100%;
+                padding: 2rem 0;
+                color: $clr-dark;
+                font-size: 2rem;
+                i{
+                    margin-bottom: 2rem;
+                    font-size: 5rem;
                 }
             }
         }
-        h3{
-            font-size: 5rem;
-            color: $clr-light;
-            font-weight: 400;
-            padding-top: 5rem;
-            text-align: center;
+        .item__icon:hover{
+            background-color: $clr-gray;
         }
-        p{
-            max-width: 60rem;
-            text-align: center;
-            margin: 0;
-            font-size: 1.5rem;
-            color: $clr-gray;
+        .item__icon:nth-child(1):hover i{
+            color: blue;
         }
-    }
-    &__text1{
-        text-align: center;
-        h2{
-            color: $clr-gray;
-            background-color: #25252B;
-            padding: 1rem;
+        .item__icon:nth-child(2):hover i{
+            color: yellowgreen;
         }
-        span{
-            color: #0098ff;
+        .item__icon:nth-child(3):hover i{
+            color: red;
+        }
+        .item__icon:nth-child(4):hover i{
+            color: black;
         }
     }
-    &__dl{
-        display: flex;
-        flex-direction: column;
-        color: #0098ff;
-        @include mediaQuery($desktop){
-            display: grid;
-            @include grid(2, 0rem);
-            height: 100%;
-            max-height: 7rem;
-            position: relative;
-    }
-}
-.btn__down{
-    display: flex;
-    flex-direction: column;
-    background-color: $clr-primary;
     @include mediaQuery($desktop){
-        display: grid;
-        @include grid(2, 0rem);
-        height: 100%;
-        max-height: 7rem;
-        position: relative;
+        .container{
+            padding: 0 1.5rem;
+    }
+    &__wrapper{
+        @include grid(4,1rem)
+    }
 }
 }
 
-.img{
+/////SLIDER
+
+.slide{
+
+    padding: 5rem 0;
+    background-color: #f5f5f5;
+.mySlides{
+    display: flex;
+    padding: 0 2rem;
+
+  
+}
+
+.name{
+    display: flex;
     position: relative;
-    .pic{
-        position: absolute;
-        top: 0px;
-        opacity: .5;
-        align-items: center;
+
+    img{
+        border-radius: 50%;
+        margin: 0 1.5rem;
+        height: 5rem;
+    }
+}
+
+.slide__text{
+    p{
+        margin-bottom: 3rem;
+    }
+    .slide__names{
+        display: flex;
+        justify-content: space-between;
+        i{
+            color: #dededf;
+        }
+        
+    }
+
+}
+
+
+.slideshow-container {
+    position: relative;
+    background: #f5f5f5;
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    transition: .2s ease;
+ 
+  }
+
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+
+  .prev:hover, .next:hover {
+    color: black;
+  }
+  
+
+}
+.tns-outer{
+    position: absolute;
+}
+
+.tns-controls{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    button{
+        border: none;
+        font-size: 3rem ;
     }
 }
 }
+
+
+
