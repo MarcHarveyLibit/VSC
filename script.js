@@ -32,3 +32,15 @@ toggle.addEventListener("click", () => {
 //   slides[slideIndex-1].style.display = "block";
 //   dots[slideIndex-1].className += " active";
 // }
+
+
+
+const headerB = document.querySelector(".header");
+window.addEventListener("scroll", () => {
+    console.log(window.pageYOffset);
+    if (window.pageYOffset >= 100){
+        headerB.classList.add("shadowB");
+    }else{
+        headerB.classList.remove("shadowB");
+    }
+})

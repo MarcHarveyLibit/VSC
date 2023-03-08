@@ -13,6 +13,7 @@
   }
 }
 
+
 @mixin scrollbar($color: $color-primary) {
   &::-webkit-scrollbar {
     width: 1rem;
@@ -71,3 +72,8 @@
   top: $top; 
 }
 
+@mixin mediaQuerytablet($width){
+  @media screen and (max-width:$width){
+    @content;
+  }
+}

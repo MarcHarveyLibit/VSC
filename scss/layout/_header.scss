@@ -2,6 +2,7 @@
     background-color: $clr-dark;
     width: 100%;
     z-index: 999;
+    position: fixed;
     &__wrapper{
         @include mediaQuery($desktop){
             display: flex;
@@ -94,6 +95,7 @@
                 padding: 2rem;
                 display: inline-block;
                 position: relative;
+                
                 @include mediaQuery($desktop){
                     font-size: 1.5rem;
                     height: 6rem;
@@ -148,5 +150,8 @@
         }
     }
         
+}
+.header{
+    box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 

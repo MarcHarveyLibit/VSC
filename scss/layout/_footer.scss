@@ -1,0 +1,98 @@
+///FOOTER///
+.footer{
+    background-color: $clr-dark;
+    &__wrapper{
+        @include mediaQuery($desktop){
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            align-items: center;
+            padding: 1rem;
+        }
+        padding: 4rem;
+        .footer__left{
+            display: flex;
+            p{
+                display: none;
+                @include mediaQuery($desktop){
+                    display: flex;
+                    color: $clr-light;
+                    margin-right: 2rem;
+                }
+            }
+            a:first-child{
+                font-weight: 100;
+                color: $clr-light;
+            }
+            a:nth-child(2){
+                font-weight: 100;
+                color: $clr-light;
+            }
+            a:nth-child(3){
+                color: $clr-dark;
+                font-size: 1rem;
+                display: flex;
+                gap: 1rem;
+                background-color: #fff;
+                margin-left: 4px ;
+                border-radius: .6rem;
+                align-items: center;
+                i{
+                    font-size: 1.4rem;
+                }
+                &:hover{
+                    background-color: ligten($clr-gray, 20);
+
+                }
+            }a:last-child{
+                font-size: 1rem;
+                color: $clr-dark;
+                position: relative;
+                background-color: #fff;
+                border-radius: .6rem;
+                margin-left: .5rem ;
+                text-align: center;
+                align-items: center;
+                &:hover{
+                    color: $clr-primary;
+                }
+            }
+        }
+    }
+}
+.windows{
+    display: flex;
+    text-align: center;
+    margin-top: 4rem;
+    ul{
+        display: flex;
+        margin-bottom: .5rem;
+    }
+    li{
+        margin-right: 2rem;
+        a{
+            color: $clr-light;
+            font-size: 1.1rem;
+            &:hover{
+                color: lighten(purple,60);
+            }
+        }
+    }
+}
+.windows-img{
+    margin-bottom: 2rem;
+    a{
+        align-items: center;
+        margin-right: .5rem;
+        font-weight: 500;
+        color: $clr-light;
+        img{
+            width: 9rem;
+        }
+    }
+    p{
+        color: $clr-light;
+        font-size: 1.1rem;
+        line-height: 1;
+    }
+}

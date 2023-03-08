@@ -1,5 +1,5 @@
 .banner{
-    background-color:$clr-dark;
+    background-color: #2C2C32;
     z-index: -1;
     &__wrapper{
        p{
@@ -179,7 +179,7 @@
 
 
 }.icon{
-    background-color: whitesmoke;
+    // background-color: whitesmoke;
     padding: 0 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -276,13 +276,21 @@
 }
 }
 
+
+
+
+
+
+
+
+
 .feedback{
     background-color: rgb(233, 229, 229);
     padding: 6rem 0 6rem;
     .feed_wrapper{
         display: flex;
         padding: 0 2rem;
-       
+        
     }
     .feed_content{
         display: flex;
@@ -518,9 +526,16 @@
 .os{
     padding: 6rem 0;
     &__wrapper{
+        @include mediaQuerytablet($tablet){
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
         @include mediaQuery($desktop){
         @include grid(3, 1rem);
         }
+
     .os__item{
         display: flex;
         justify-content: center;
@@ -535,6 +550,11 @@
         // margin-bottom: 2rem;
         text-align: center;
         font-size: 1.5rem;
+        padding: 1.2rem 2rem;
+        i{
+            margin-right: 1rem;
+        }
+        
             small{
                 font-size: 1rem;
             }
@@ -544,9 +564,11 @@
         }
         table{
             height: 11rem;
+            margin-top: 1rem;
             tr{
                 td:first-child{
                     text-align: center;
+                 
                 }
                 td{
                 // width: 3rem;
@@ -582,3 +604,84 @@
         }    
     }
 }
+
+
+//Feautures
+.features {
+    background-color: lighten($clr-gray, 30);
+    padding: 3rem 7.5rem;
+    width: 100%;
+    &__wrapper{
+        text-align: center;
+    
+        .features__head{
+            @include mediaQuery($desktop){
+                @include grid(2, 1rem);
+            }
+            .features__left{
+                margin: 3rem 0;
+                margin-bottom: 7rem;
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                }
+                p{
+                    font-weight: 100;
+                    a{
+                        color: #007be0;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .features__right{
+                margin: 3rem 0;
+                margin-bottom: 7rem;
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                    a{
+                        color: $clr-primary;
+                        &:hover{
+                            text-decoration-line: underline;
+                        }
+                    }
+                }
+                p{
+                    font-weight: 100;
+                }
+            }
+        }
+
+        .features__bottom{
+            @include mediaQuery($desktop){
+                width: 60rem;
+                margin: 0 auto;
+            }
+            h2{
+                font-weight: 500;
+                color: lighten($clr-dark, 30);
+                margin-bottom: 2rem;
+            }
+            p{
+                line-height: 3;
+                font-size: 1.19rem;
+                color: lighten($clr-dark, 30);
+                a{
+                    color: $clr-primary;
+                    &:hover{
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

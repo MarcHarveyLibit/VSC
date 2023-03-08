@@ -42,4 +42,12 @@
     background-color: $clr-primary-dark;
     }
     }
+.btn2{
+    background-color: $clr-light;
+    color: $clr-dark;
+    padding: .5rem .8rem;
+    &:hover{
+    background-color: $clr-primary-dark;
+    }
+}
     
